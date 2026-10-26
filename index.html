@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpeedX Motors</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="#home" class="brand" aria-label="SpeedX Motors Home">
+          <i class="fa-solid fa-car-side"></i>
+          <span>SpeedX Motors</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#collection">Collection</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
+          <a href="#register">Register</a>
+          <a href="#contact">Contact</a>
+          <div class="cart-box" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count" class="cart-badge">0</span>
+          </div>
+        </div>
+
+        <div id="live-time" class="live-time">YYYY-MM-DD HH:MM:SS</div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <p class="hero-tag">Luxury performance meets precision</p>
+          <h1>Drive Your Dream</h1>
+          <p class="hero-text">Experience Speed. Experience Luxury.</p>
+          <div class="hero-buttons">
+            <button id="explore-btn" class="primary-btn">Explore Collection</button>
+            <button id="gallery-btn" class="secondary-btn">View Gallery</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <div class="container feature-grid">
+          <div class="feature-card">
+            <i class="fa-solid fa-gauge-high"></i>
+            <h3>Elite Performance</h3>
+            <p>High-output engines tuned for precision and adrenaline.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Certified Quality</h3>
+            <p>Every sports car is inspected and road-ready before delivery.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-award"></i>
+            <h3>Luxury Standard</h3>
+            <p>Premium finish, comfort, and craftsmanship in every detail.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="collection" class="products-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Featured lineup</p>
+            <h2>Our Sports Car Collection</h2>
+          </div>
+          <div id="product-grid" class="product-grid"></div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Performance gallery</p>
+            <h2>Luxury in Motion</h2>
+          </div>
+          <div id="gallery-grid" class="gallery-grid"></div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="container about-content">
+          <div class="about-text">
+            <p class="section-tag">Why choose us</p>
+            <h2>Performance, power, and prestige</h2>
+            <p>
+              At SpeedX Motors, we bring together iconic performance machines and everyday luxury experiences.
+              Our dealership offers handpicked sports cars from the world’s most admired manufacturers.
+            </p>
+            <p>
+              Whether you are chasing speed, craftsmanship, or an unforgettable driving experience, we help you find a machine that matches your ambitions.
+            </p>
+
+            <div class="stat-grid">
+              <div class="stat-card">
+                <strong>20+</strong>
+                <span>Cars</span>
+              </div>
+              <div class="stat-card">
+                <strong>15+</strong>
+                <span>Brands</span>
+              </div>
+              <div class="stat-card">
+                <strong>100%</strong>
+                <span>Passion</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-image-box">
+            <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?auto=format&fit=crop&w=1200&q=80" alt="Luxury Sports Car" />
+          </div>
+        </div>
+      </section>
+
+      <section id="register" class="register-section">
+        <div class="container register-wrap">
+          <div class="section-heading register-heading">
+            <p class="section-tag">Join the club</p>
+            <h2>Create Your Account</h2>
+          </div>
+
+          <form id="register-form" class="register-form">
+            <div class="input-row">
+              <input type="text" id="full-name" placeholder="Full Name" />
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+            <div class="input-row">
+              <input type="password" id="password" placeholder="Password" />
+              <input type="password" id="confirm-password" placeholder="Confirm Password" />
+            </div>
+            <div class="input-row single">
+              <input type="tel" id="phone" placeholder="Phone Number" />
+            </div>
+            <button type="submit" class="primary-btn register-btn">Register</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <h3>SpeedX Motors</h3>
+          <p>
+            Premium performance cars for drivers who demand speed, comfort, and style in every mile.
+          </p>
+          <p class="copyright">© <span id="current-year"></span> SpeedX Motors. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+
+          <div class="newsletter">
+            <input id="newsletter-email" type="email" placeholder="Your email address" />
+            <button id="subscribe-btn" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="product-modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="close-product-modal" class="close-btn" aria-label="Close">&times;</button>
+        <div id="product-modal-body"></div>
+      </div>
+    </div>
+
+    <div id="gallery-modal" class="modal hidden">
+      <div class="gallery-modal-content">
+        <button id="close-gallery-modal" class="close-btn" aria-label="Close">&times;</button>
+        <img id="gallery-modal-image" src="" alt="Expanded gallery image" />
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
